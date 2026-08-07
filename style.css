@@ -1,14 +1,12 @@
 :root {
-  --bg: #12181f;
-  --bg-raised: #171f28;
-  --paper: #e8e2d3;
-  --paper-dim: #a8a196;
-  --amber: #d9a441;
-  --teal: #5b9aa0;
-  --line: rgba(232, 226, 211, 0.12);
-  --font-display: "Fraunces", serif;
-  --font-body: "IBM Plex Sans", sans-serif;
-  --font-mono: "IBM Plex Mono", monospace;
+  --bg: #000000;
+  --bg-raised: #0e0e0e;
+  --text: #ededed;
+  --text-dim: #8a8a8a;
+  --line: rgba(237, 237, 237, 0.14);
+  --font-display: "DM Serif Display", serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
 }
 
 * {
@@ -22,7 +20,7 @@ html {
 body {
   margin: 0;
   background: var(--bg);
-  color: var(--paper);
+  color: var(--text);
   font-family: var(--font-body);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -40,7 +38,7 @@ a {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid var(--amber);
+  outline: 2px solid var(--text);
   outline-offset: 3px;
 }
 
@@ -56,34 +54,33 @@ button:focus-visible {
 
 .site-title {
   font-family: var(--font-display);
-  font-weight: 600;
   font-size: 1.3rem;
   text-decoration: none;
-  color: var(--paper);
+  color: var(--text);
 }
 
 .cursor {
-  color: var(--amber);
+  color: var(--text-dim);
 }
 
 .site-sub {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  color: var(--paper-dim);
+  color: var(--text-dim);
   letter-spacing: 0.02em;
 }
 
 /* intro */
 .intro h1 {
   font-family: var(--font-display);
-  font-weight: 600;
   font-size: 2.4rem;
   line-height: 1.15;
   margin: 0 0 0.75rem;
+  font-weight: 400;
 }
 
 .intro p {
-  color: var(--paper-dim);
+  color: var(--text-dim);
   font-size: 1.02rem;
   margin: 0 0 2.5rem;
 }
@@ -112,15 +109,15 @@ button:focus-visible {
 }
 
 .entry:hover .entry-title {
-  color: var(--amber);
+  color: var(--text-dim);
 }
 
 .entry-id {
   flex: none;
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: var(--teal);
-  border: 1px solid rgba(91, 154, 160, 0.4);
+  color: var(--text-dim);
+  border: 1px solid var(--line);
   border-radius: 3px;
   padding: 0.2rem 0.4rem;
   height: fit-content;
@@ -139,7 +136,7 @@ button:focus-visible {
   gap: 0.6rem;
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: var(--paper-dim);
+  color: var(--text-dim);
   margin-bottom: 0.4rem;
 }
 
@@ -147,21 +144,21 @@ button:focus-visible {
   border: 1px solid var(--line);
   border-radius: 3px;
   padding: 0.1rem 0.4rem;
-  color: var(--paper-dim);
+  color: var(--text-dim);
 }
 
 .entry-title {
   font-family: var(--font-display);
-  font-weight: 600;
   font-size: 1.25rem;
   margin: 0 0 0.35rem;
-  color: var(--paper);
+  color: var(--text);
   transition: color 0.15s ease;
+  font-weight: 400;
 }
 
 .entry-excerpt {
   margin: 0;
-  color: var(--paper-dim);
+  color: var(--text-dim);
   font-size: 0.95rem;
 }
 
@@ -170,52 +167,50 @@ button:focus-visible {
   display: inline-block;
   font-family: var(--font-mono);
   font-size: 0.8rem;
-  color: var(--teal);
+  color: var(--text-dim);
   text-decoration: none;
   margin-bottom: 2rem;
 }
 
 .back:hover {
-  color: var(--amber);
+  color: var(--text);
 }
 
 .post-title {
   font-family: var(--font-display);
-  font-weight: 600;
   font-size: 2.1rem;
   line-height: 1.2;
   margin: 0.6rem 0 1.8rem;
+  font-weight: 400;
 }
 
 .post .entry-meta {
   margin-bottom: 0;
 }
 
-.post .entry-id {
-  color: var(--teal);
-}
-
 .post-content h2 {
   font-family: var(--font-display);
   font-size: 1.4rem;
   margin: 2.2rem 0 0.8rem;
+  font-weight: 400;
 }
 
 .post-content h3 {
   font-family: var(--font-display);
   font-size: 1.15rem;
   margin: 1.8rem 0 0.6rem;
+  font-weight: 400;
 }
 
 .post-content p {
   margin: 0 0 1.1rem;
-  color: var(--paper);
+  color: var(--text);
 }
 
 .post-content ul {
   margin: 0 0 1.1rem;
   padding-left: 1.3rem;
-  color: var(--paper);
+  color: var(--text);
 }
 
 .post-content li {
@@ -228,7 +223,7 @@ button:focus-visible {
   padding: 0.15rem 0.35rem;
   border-radius: 3px;
   font-size: 0.88em;
-  color: var(--amber);
+  color: var(--text);
 }
 
 .post-content pre {
@@ -243,7 +238,7 @@ button:focus-visible {
 .post-content pre code {
   background: none;
   padding: 0;
-  color: var(--paper);
+  color: var(--text);
 }
 
 /* footer */
@@ -253,7 +248,7 @@ button:focus-visible {
   border-top: 1px solid var(--line);
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: var(--paper-dim);
+  color: var(--text-dim);
 }
 
 /* responsive */
