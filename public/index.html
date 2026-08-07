@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>{{title}}</title>
+<title>Log</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-<link rel="stylesheet" href="{{base}}style.css" />
+<link rel="stylesheet" href="style.css" />
 <script>
   (() => {
     const savedTheme = localStorage.getItem("theme");
@@ -20,7 +20,7 @@
 <body>
 <div class="wrap">
   <header class="site-header">
-    <a href="{{base}}index.html" class="site-title">Adam<span class="cursor">_</span></a>
+    <a href="index.html" class="site-title">Adam<span class="cursor">_</span></a>
     <div class="header-tools">
       <span class="site-sub">build log — Đà Nẵng</span>
       <button class="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode">
@@ -29,7 +29,32 @@
     </div>
   </header>
   <main>
-    {{body}}
+    <section class="intro">
+  <h1>What I'm building.</h1>
+  <p>Notes from projects, hackathons, and things I broke and fixed along the way.</p>
+</section>
+
+<section class="entries">
+
+      <a class="entry" href="posts/building-gia-that-for-google-ai-riser-vietnam.html">
+        <div class="entry-id">e5eabb0</div>
+        <div class="entry-body">
+          <div class="entry-meta"><time>Aug 5, 2026</time><span class="tag">hackathon</span><span class="tag">ai</span><span class="tag">vietnam</span></div>
+          <h2 class="entry-title">Building Giá Thật for Google AI Riser Vietnam</h2>
+          <p class="entry-excerpt">Notes on the fake review detector I'm building for Vietnamese e-commerce, and the core design problem I'm stuck on.</p>
+        </div>
+      </a>
+
+      <a class="entry" href="posts/swapping-intomath-s-semantic-router-for-something-lighter.html">
+        <div class="entry-id">5e6769f</div>
+        <div class="entry-body">
+          <div class="entry-meta"><time>Jul 20, 2026</time><span class="tag">intomath</span><span class="tag">architecture</span></div>
+          <h2 class="entry-title">Swapping IntoMath's semantic router for something lighter</h2>
+          <p class="entry-excerpt">Weighing whether an LLM-based classifier is overkill for routing geometry commands, and sketching an embedding-based replacement.</p>
+        </div>
+      </a>
+</section>
+
   </main>
   <footer class="site-footer">
     <span>© <span id="year"></span> Adam</span>

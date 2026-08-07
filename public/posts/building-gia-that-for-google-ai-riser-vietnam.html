@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>{{title}}</title>
+<title>Building Giá Thật for Google AI Riser Vietnam — Log</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-<link rel="stylesheet" href="{{base}}style.css" />
+<link rel="stylesheet" href="../style.css" />
 <script>
   (() => {
     const savedTheme = localStorage.getItem("theme");
@@ -20,7 +20,7 @@
 <body>
 <div class="wrap">
   <header class="site-header">
-    <a href="{{base}}index.html" class="site-title">Adam<span class="cursor">_</span></a>
+    <a href="../index.html" class="site-title">Adam<span class="cursor">_</span></a>
     <div class="header-tools">
       <span class="site-sub">build log — Đà Nẵng</span>
       <button class="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode">
@@ -29,7 +29,34 @@
     </div>
   </header>
   <main>
-    {{body}}
+    <article class="post">
+  <a class="back" href="../index.html">&larr; log</a>
+  <div class="entry-meta">
+    <span class="entry-id">e5eabb0</span>
+    <time>Aug 5, 2026</time>
+    <span class="tag">hackathon</span><span class="tag">ai</span><span class="tag">vietnam</span>
+  </div>
+  <h1 class="post-title">Building Giá Thật for Google AI Riser Vietnam</h1>
+  <div class="post-content">
+    <p>Giá Thật is my entry for the Google AI Riser Vietnam 2026 hackathon: a tool that looks at a screenshot of product reviews from a Vietnamese e-commerce platform and flags whether they look trustworthy.</p>
+<h2>The pipeline so far</h2>
+<ul>
+<li>Screenshot comes in</li>
+<li>Gemini vision reads the review text, ratings, and reviewer patterns</li>
+<li>The service runs on Cloud Run so it scales down to zero between demo runs</li>
+</ul>
+<h2>The hard part</h2>
+<p>The real design problem isn't calling Gemini — it's figuring out <em>which</em> signals actually separate a real review from a fake one, and doing it cheaply enough to run at scale. Things I'm weighing:</p>
+<ul>
+<li>Reviewer language patterns (generic praise vs specific product detail)</li>
+<li>Timing clusters (a wall of 5-star reviews posted within minutes of each other)</li>
+<li>Cross-referencing reviewer history where it's visible in the screenshot</li>
+</ul>
+<p>Deadline is August 30. More notes as the trustworthiness scoring takes shape.</p>
+
+  </div>
+</article>
+
   </main>
   <footer class="site-footer">
     <span>© <span id="year"></span> Adam</span>
